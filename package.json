@@ -13,15 +13,15 @@
     "build": "tsc",
     "lint": "eslint source/**/*.*",
     "lint:fix": "eslint --fix \"source/**/*\"",
-    "test": "yarn test:types && yarn test:ts",
+    "test": "npm run test:types && npm run test:ts",
     "test:ts": "npx jest -c jest.config.ts --coverageDirectory reports/coverage-test source/test/unit/*.spec.ts",
     "coverage": "npx jest -c jest.config.coverage.ts --coverage --detectOpenHandles --forceExit --bail --logHeapUsage --debug",
     "test:types": "npx jest -c jest.config.tsd.js",
     "integration": "jest --coverageDirectory reports/coverage-integration source/test/integration/*.spec.ts",
     "compliance": "jest --coverageDirectory reports/coverage-compliance source/test/compliance/*.spec.ts",
     "docs": "typedoc --out docs --entryPoint '\"client\"' --excludeExternals --excludeNotExported --excludePrivate source/lib/client.ts",
-    "dev-link": "yarn && yarn build && yarn link",
-    "dev-unlink": "yarn unlink @plus4nodered/ts-bacstack -g",
+    "dev-link": "npm install && npm run build && npm link",
+    "dev-unlink": "npm unlink @plus4nodered/ts-bacstack -g",
     "code:check": "standard --fix"
   },
   "repository": {
@@ -90,6 +90,5 @@
     "ts-jest": "^29.0.3",
     "tsd": "^0.25.0",
     "typescript": "^4.9.4"
-  },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  }
 }

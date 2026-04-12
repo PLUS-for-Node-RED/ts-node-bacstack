@@ -15,13 +15,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
-      - run: yarn --frozen-lockfile
-      - run: yarn changelog
-      - run: yarn lint
-      - run: yarn test
+      - run: npm ci
+      - run: npm run changelog
+      - run: npm run lint
+      - run: npm test
       # TODO: deploy coverage results
-      - run: yarn integration
-      - run: yarn docs
+      - run: npm run integration
+      - run: npm run docs
 
   compliance:
     runs-on: ubuntu-latest
@@ -34,6 +34,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: yarn --frozen-lockfile
-      - run: yarn docs
+      - run: npm ci
+      - run: npm run docs
       # TODO: deploy pages
