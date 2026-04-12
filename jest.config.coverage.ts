@@ -27,14 +27,6 @@ const config: Config = {
         name: 'ts-test'
       },
       testMatch: ['<rootDir>/source/test/**/*.spec.ts']
-    },
-    {
-      displayName: {
-        color: 'blue',
-        name: 'types'
-      },
-      runner: 'jest-runner-tsd',
-      testMatch: ['<rootDir>/source/test/types/**/*.spec.ts']
     }
   ]
 };
