@@ -7,7 +7,7 @@ const config: Config = {
   },
   'reporters': ['default', 'github-actions'],
   'collectCoverageFrom': [
-    '**/*.{ts,tsx}',
+    'source/lib/**/*.{ts,tsx}',
     '!**/node_modules/**',
     '!**/dist/**'
   ],
@@ -27,11 +27,6 @@ const config: Config = {
         name: 'ts-test'
       },
       testMatch: ['<rootDir>/source/test/**/*.spec.ts']
-    },
-    {
-      displayName: 'lint',
-      runner: 'jest-runner-eslint',
-      testMatch: ['<rootDir>/source/lib/**/*.ts']
     }
   ]
 };
