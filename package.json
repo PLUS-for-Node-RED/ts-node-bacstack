@@ -9,7 +9,6 @@
     "iconv-lite": "^0.7.2"
   },
   "scripts": {
-    "changelog": "commitlint --from=origin/master",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint source/**/*.*",
@@ -58,11 +57,6 @@
     "dist/**/*.d.ts",
     "!dist/test/**/*"
   ],
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "homepage": "https://hila-tech.github.io/ts-node-bacstack/",
   "license": "MIT",
   "bugs": {
@@ -72,8 +66,6 @@
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
     "@babel/preset-typescript": "^7.28.5",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
     "@jest/globals": "^29.3.1",
     "@types/debug": "^4.1.7",
     "@types/jest": "^29.2.5",

@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
-      - run: npm run changelog
       - run: npm run lint
       - run: npm test
       # TODO: deploy coverage results
